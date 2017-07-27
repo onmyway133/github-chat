@@ -31,10 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
   showChat(window, document)
 })
 
-function $(e) {
-  return document.getElementById(e)
-}
-
 function getCurrentUser() {
   const metas = document.getElementsByTagName('meta')
    for (var i=0; i<metas.length; i++) { 
@@ -43,7 +39,7 @@ function getCurrentUser() {
       } 
    } 
 
-   return 'anonymous'
+   return 'anonymous-' + makeId()
 }
 
 function createBox() {
@@ -64,4 +60,15 @@ function createBox() {
   box.setAttribute('data-nickname', getCurrentUser())
 
   document.body.appendChild(box)
+}
+
+function makeId() {
+  var text = ""
+  const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+
+  for (var i = 0; i < 5; i++) {
+    text += possible.charAt(Math.floor(Math.random() * possible.length))
+  }
+    
+  return text
 }
