@@ -35,6 +35,17 @@ function $(e) {
   return document.getElementById(e)
 }
 
+function getCurrentUser() {
+  const metas = document.getElementsByTagName('meta')
+   for (var i=0; i<metas.length; i++) { 
+      if (metas[i].getAttribute('name') == 'user-login') { 
+         return metas[i].getAttribute('content')
+      } 
+   } 
+
+   return 'anonymous'
+}
+
 function createBox() {
   const box = document.createElement('div')
   box.id = boxId
@@ -50,6 +61,7 @@ function createBox() {
   box.style.borderRadius = '10px'
 
   box.setAttribute('data-channel', 'github')
+  box.setAttribute('data-nickname', getCurrentUser())
 
   document.body.appendChild(box)
 }
