@@ -20,5 +20,5 @@
     }
   ],
   "permissions": ["https://github.com/*"],
-  "content_security_policy": "script-src 'self' https://embed.tlk.io/github?nickname=onmyway133; child-src 'self' https://embed.tlk.io/github?nickname=onmyway133; object-src 'self'"
+  "content_security_policy": "script-src 'self' https://embed.tlk.io; child-src 'self' https://embed.tlk.io; object-src 'self'"
 }
