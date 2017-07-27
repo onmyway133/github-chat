@@ -78,6 +78,9 @@ function createTop() {
 
   div.style.background = 'blue'
   div.style.height = '30px'
+
+  const button = createButton()
+  div.appendChild(button)
   
   return div
 }
@@ -89,6 +92,19 @@ function createBox() {
   div.style.top = '30px'
   
   return div
+}
+
+function createButton() {
+  const button = document.createElement('button')
+  button.innerText = '—'
+  
+  button.style.width = '20px'
+  button.style.height = '20px'
+  button.style.top = '5px'
+  button.style.left = '5px'
+  button.style.position = 'relative'
+
+  return button
 }
 
 function makeId() {
