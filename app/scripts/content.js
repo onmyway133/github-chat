@@ -28,6 +28,21 @@ document.addEventListener('DOMContentLoaded', () => {
   createBox()
 })
 
+function $(e) {
+  return document.getElementById(e)
+}
+
 function createBox() {
-  console.log('hello world')
+  const box = document.createElement('div')
+  box.id = 'github-chat'
+
+  box.style.position = 'fixed'
+  box.style.right = '10px'
+  box.style.bottom = '10px'
+  box.style.height = '200px'
+  box.style.width = '200px'
+  box.style.background = 'red'
+  box.style.color = 'blue'
+
+  document.body.appendChild(box)
 }
