@@ -53,7 +53,7 @@ function createContainer() {
   div.style.position = 'fixed'
   div.style.right = '50px'
   div.style.bottom = '10px'
-  div.style.width = '400px'
+  div.style.width = '300px'
   div.style.borderStyle = 'solid'
   div.style.borderColor = 'orange'
   div.style.borderWidth = '2px'
@@ -82,6 +82,7 @@ function createBox() {
   div.style.height = '200px'
   div.style.background = '#E9EBEE'
   div.style.opacity = '0.5'
+  div.style.display = 'none'
 
   div.setAttribute('data-channel', makeChannelName())
   div.setAttribute('data-nickname', getCurrentUser())
