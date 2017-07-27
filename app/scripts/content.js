@@ -29,19 +29,9 @@ function showChat(t, e) {
 
 document.addEventListener('DOMContentLoaded', () => {
   createOverlay()
+  getPath()
   showChat(window, document)
 })
-
-function getCurrentUser() {
-  const metas = document.getElementsByTagName('meta')
-   for (var i=0; i<metas.length; i++) { 
-      if (metas[i].getAttribute('name') == 'user-login') { 
-         return metas[i].getAttribute('content')
-      } 
-   } 
-
-   return 'anonymous-' + makeId()
-}
 
 function createOverlay() {
   const container = createContainer()
@@ -65,9 +55,6 @@ function createContainer() {
   div.style.borderStyle = 'solid'
   div.style.borderColor = 'orange'
   div.style.borderWidth = '2px'
-
-  div.setAttribute('data-channel', 'github')
-  div.setAttribute('data-nickname', getCurrentUser())
 
   return div
 }
@@ -93,6 +80,9 @@ function createBox() {
   div.style.height = '200px'
   div.style.background = '#E9EBEE'
   div.style.opacity = '0.5'
+
+  div.setAttribute('data-channel', makeChannelName())
+  div.setAttribute('data-nickname', getCurrentUser())
   
   return div
 }
@@ -130,4 +120,30 @@ function makeId() {
   }
     
   return text
+}
+
+function getCurrentUser() {
+  const metas = document.getElementsByTagName('meta')
+   for (var i=0; i<metas.length; i++) { 
+      if (metas[i].getAttribute('name') == 'user-login') { 
+         return metas[i].getAttribute('content')
+      } 
+   } 
+
+   return 'anonymous-' + makeId()
+}
+
+function getPath() {
+  const parts = location.pathname.split('/')
+  if (parts.length > 1 && parts[1].length > 0) {
+    return parts[1]
+  } else {
+    return null
+  }
+}
+
+function makeChannelName() {
+  const path = getPath()
+
+  return 'github' + (path != null ? ('-' + path) : '')
 }
