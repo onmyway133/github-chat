@@ -99,6 +99,7 @@ function createButton() {
   button.style.left = '5px'
   button.style.position = 'relative'
   button.style.background = '#FEC242'
+  button.style.zIndex = 99
 
   button.onclick = () => {
     const box = document.getElementById(boxId)
