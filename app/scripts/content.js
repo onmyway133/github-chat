@@ -1,6 +1,6 @@
 'use strict';
 
-const boxId = 'github-chat'
+const boxId = 'github-chat-box'
 
 function showChat(t, e) {
   var i = function() {
@@ -27,7 +27,7 @@ function showChat(t, e) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  createBox()
+  createOverlay()
   showChat(window, document)
 })
 
@@ -42,24 +42,53 @@ function getCurrentUser() {
    return 'anonymous-' + makeId()
 }
 
+function createOverlay() {
+  const container = createContainer()
+  const top = createTop()
+  const box = createBox()
+
+  container.appendChild(top)
+  container.appendChild(box)
+
+  document.body.appendChild(container)
+}
+
+function createContainer() {
+  const div = document.createElement('div')
+  div.id = 'github-chat-container'
+
+  div.style.position = 'fixed'
+  div.style.right = '10px'
+  div.style.bottom = '10px'
+  div.style.height = '200px'
+  div.style.width = '200px'
+  div.style.borderStyle = 'solid'
+  div.style.borderColor = 'orange'
+  div.style.borderWidth = '2px'
+
+  div.setAttribute('data-channel', 'github')
+  div.setAttribute('data-nickname', getCurrentUser())
+
+  return div
+}
+
+function createTop() {
+  const div = document.createElement('div')
+  div.id = 'github-chat-top'
+
+  div.style.background = 'blue'
+  div.style.height = '30px'
+  
+  return div
+}
+
 function createBox() {
-  const box = document.createElement('div')
-  box.id = boxId
+  const div = document.createElement('div')
+  div.id = boxId
 
-  box.style.position = 'fixed'
-  box.style.right = '10px'
-  box.style.bottom = '10px'
-  box.style.height = '200px'
-  box.style.width = '200px'
-  box.style.borderStyle = 'solid'
-  box.style.borderColor = 'orange'
-  box.style.borderWidth = '2px'
-  box.style.borderRadius = '10px'
-
-  box.setAttribute('data-channel', 'github')
-  box.setAttribute('data-nickname', getCurrentUser())
-
-  document.body.appendChild(box)
+  div.style.top = '30px'
+  
+  return div
 }
 
 function makeId() {
