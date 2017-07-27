@@ -66,7 +66,7 @@ function createTop() {
   div.id = 'github-chat-top'
 
   div.style.background = '#4080FF'
-  div.style.height = '30px'
+  div.style.height = '42px'
 
   const button = createButton()
   div.appendChild(button)
@@ -78,10 +78,8 @@ function createBox() {
   const div = document.createElement('div')
   div.id = boxId
 
-  div.style.top = '30px'
-  div.style.height = '200px'
+  div.style.height = '400px'
   div.style.background = '#E9EBEE'
-  div.style.opacity = '0.5'
   div.style.display = 'none'
 
   div.setAttribute('data-channel', makeChannelName())
@@ -100,6 +98,7 @@ function createButton() {
   button.style.top = '5px'
   button.style.left = '5px'
   button.style.position = 'relative'
+  button.style.background = '#FEC242'
 
   button.onclick = () => {
     const box = document.getElementById(boxId)
