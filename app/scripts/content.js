@@ -16,7 +16,9 @@ function showChat(t, e) {
         m = [];
       "dev" == i && (r = "https://embed.lvh.me:3000/" + n), o && o.length && m.push("custom_css_path=" + o), s && s.length && m.push("nickname=" + s), a && a.length && m.push("theme=" + a), m.length && (r += "?" + m.join("&")), l.setAttribute("src", r), l.setAttribute("width", "100%"), l.setAttribute("height", "100%"), l.setAttribute("frameborder", "0"), l.setAttribute("style", "margin-bottom: -8px;");
       var u = t.getAttribute("style");
-      t.setAttribute("style", "overflow: auto; -webkit-overflow-scrolling: touch;" + u), t.textContent = "", t.appendChild(l)
+      t.setAttribute("style", "overflow: auto; -webkit-overflow-scrolling: touch;" + u)
+      t.textContent = ""
+      t.appendChild(l)
     },
     n = function() {
       var n = e.getElementById(boxId),
