@@ -1,5 +1,6 @@
 'use strict';
 
+const containerId = 'github-chat-container'
 const boxId = 'github-chat-box'
 
 function showChat(t, e) {
@@ -55,7 +56,7 @@ function createOverlay() {
 
 function createContainer() {
   const div = document.createElement('div')
-  div.id = 'github-chat-container'
+  div.id = containerId
 
   div.style.position = 'fixed'
   div.style.right = '10px'
@@ -98,11 +99,17 @@ function createButton() {
   const button = document.createElement('button')
   button.innerText = '—'
   
+  button.style.padding = '0px'
   button.style.width = '20px'
   button.style.height = '20px'
   button.style.top = '5px'
   button.style.left = '5px'
   button.style.position = 'relative'
+
+  button.onclick = () => {
+    const box = document.getElementById(boxId)
+    box.style.display = 'none'
+  }
 
   return button
 }
