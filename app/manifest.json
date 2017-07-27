@@ -20,5 +20,5 @@
     }
   ],
   "permissions": ["https://github.com/*"],
-  "content_security_policy": "frame-src https://embed.tlk.io; default-src https://embed.tlk.io/"
+  "content_security_policy": "frame-src 'self' https://embed.tlk.io; default-src 'self' https://embed.tlk.io/"
 }
