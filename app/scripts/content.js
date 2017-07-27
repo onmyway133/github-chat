@@ -44,8 +44,10 @@ function createBox() {
   box.style.bottom = '10px'
   box.style.height = '200px'
   box.style.width = '200px'
-  box.style.background = 'red'
-  box.style.color = 'blue'
+  box.style.borderStyle = 'solid'
+  box.style.borderColor = 'orange'
+  box.style.borderWidth = '2px'
+  box.style.borderRadius = '10px'
 
   document.body.appendChild(box)
 }
