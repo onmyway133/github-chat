@@ -49,5 +49,7 @@ function createBox() {
   box.style.borderWidth = '2px'
   box.style.borderRadius = '10px'
 
+  box.setAttribute('data-channel', 'github')
+
   document.body.appendChild(box)
 }
