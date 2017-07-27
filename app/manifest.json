@@ -18,5 +18,6 @@
       ]
     }
   ],
-  "permissions": ["https://github.com/*"]
+  "permissions": ["https://github.com/*"],
+  "content_security_policy": "script-src 'self' https://*.tlk.io; child-src 'self' https://*.tlk.io; object-src 'self'"
 }
