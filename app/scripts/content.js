@@ -59,10 +59,9 @@ function createContainer() {
   div.id = containerId
 
   div.style.position = 'fixed'
-  div.style.right = '10px'
+  div.style.right = '50px'
   div.style.bottom = '10px'
-  div.style.height = '200px'
-  div.style.width = '200px'
+  div.style.width = '400px'
   div.style.borderStyle = 'solid'
   div.style.borderColor = 'orange'
   div.style.borderWidth = '2px'
@@ -77,7 +76,7 @@ function createTop() {
   const div = document.createElement('div')
   div.id = 'github-chat-top'
 
-  div.style.background = 'blue'
+  div.style.background = '#4080FF'
   div.style.height = '30px'
 
   const button = createButton()
@@ -91,6 +90,9 @@ function createBox() {
   div.id = boxId
 
   div.style.top = '30px'
+  div.style.height = '200px'
+  div.style.background = '#E9EBEE'
+  div.style.opacity = '0.5'
   
   return div
 }
@@ -108,7 +110,12 @@ function createButton() {
 
   button.onclick = () => {
     const box = document.getElementById(boxId)
-    box.style.display = 'none'
+
+    if (box.style.display == 'none') {
+      box.style.display = 'block'
+    } else {
+      box.style.display = 'none'
+    }
   }
 
   return button
