@@ -1,7 +1,7 @@
 # github-chat
 
 <div align = "center">
-<img src="banner.png" width="480" height="300" />
+<img src="banner.png" width="640" height="400" />
 <br />
 </div>
 
