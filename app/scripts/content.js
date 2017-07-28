@@ -50,13 +50,10 @@ function createiFrame() {
   let baseUrl = chrome.runtime.getURL('iframe.html')
   // baseUrl = encodeURIComponent(baseUrl)
   let iframe = document.createElement('iframe')
+  iframe.id = 'github-chat-box-iframe-wrapper'
   
-  iframe.style.position = 'absolute'
-  iframe.style.top = '0px'
-  iframe.style.left = '0px'
   iframe.style.width = '100%'
   iframe.style.height = '100%'
-  iframe.style.border = '0'
 
   const link = 'https://embed.tlk.io/' + makeChannelName() + '/' + '?nickname=' + getCurrentUser()
   let url = encodeURIComponent(link)
@@ -85,7 +82,7 @@ function createTop() {
   div.id = 'github-chat-top'
 
   div.style.background = '#4080FF'
-  div.style.height = '42px'
+  div.style.height = '30px'
 
   const button = createButton()
   div.appendChild(button)
