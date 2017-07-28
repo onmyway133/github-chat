@@ -1,9 +1,15 @@
 # github-chat
 
+<div align = "center">
+<img src="banner.png" width="480" height="300" />
+<br />
+</div>
+
 ## Description
 
 - Icon from https://www.emojione.com
 - Chat from https://tlk.io/
+- Available on the Chrome Web Store https://chrome.google.com/webstore/detail/github-chat/fkkkglfjngejhnmjhhpahenlligojapa
 
 ## Author
 
