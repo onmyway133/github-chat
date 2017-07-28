@@ -41,10 +41,13 @@ function createOverlay() {
 
   container.appendChild(top)
   container.appendChild(box)
-
   document.body.appendChild(container)
 
-    // iframe
+  const iframe = createiFrame()
+  box.appendChild(iframe)
+}
+
+function createiFrame() {
   let baseUrl = chrome.runtime.getURL('iframe.html')
   // baseUrl = encodeURIComponent(baseUrl)
   let iframe = document.createElement('iframe')
@@ -58,7 +61,6 @@ function createOverlay() {
 
   let url = encodeURIComponent('https://embed.tlk.io')
   iframe.src = `${baseUrl}?url=${url}`
-  box.appendChild(iframe)
 }
 
 function createContainer() {
