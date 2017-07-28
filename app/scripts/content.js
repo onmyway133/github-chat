@@ -47,6 +47,7 @@ function createContainer() {
   div.style.borderStyle = 'solid'
   div.style.borderColor = 'orange'
   div.style.borderWidth = '2px'
+  div.style.borderRadius = '3px'
 
   return div
 }
