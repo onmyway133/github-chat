@@ -4,5 +4,6 @@ let url    = decodeURIComponent(window.location.search.replace('?url=', ''))
 let iframe = document.createElement('iframe')
 iframe.src = url
 
-const box = document.getElementById('github-chat-box')
-box.appendChild(iframe)
+window.onload = () => {
+  document.body.appendChild(iframe)
+}
