@@ -31,7 +31,6 @@ function showChat(t, e) {
 
 document.addEventListener('DOMContentLoaded', () => {
   createOverlay()
-  showChat(window, document)
 })
 
 function createOverlay() {
@@ -59,7 +58,8 @@ function createiFrame() {
   iframe.style.height = '100%'
   iframe.style.border = '0'
 
-  let url = encodeURIComponent('https://embed.tlk.io')
+  const link = 'https://embed.tlk.io/' + makeChannelName() + '/' + '?nickname=' + getCurrentUser()
+  let url = encodeURIComponent(link)
   iframe.src = `${baseUrl}?url=${url}`
 
   return iframe
