@@ -20,7 +20,7 @@
     }
   ],
   "permissions": ["https://github.com/*"],
-  "content_security_policy": "frame-src 'self' https://embed.tlk.io; default-src 'self' https://embed.tlk.io/ 'unsafe-inline'",
+  "content_security_policy": "frame-src 'self' https://embed.tlk.io; default-src 'self' https://embed.tlk.io/",
   "web_accessible_resources": [
     "iframe.html",
     "scripts/iframe.js"
