@@ -48,6 +48,14 @@ function createOverlay() {
   let baseUrl = chrome.runtime.getURL('iframe.html')
   // baseUrl = encodeURIComponent(baseUrl)
   let iframe = document.createElement('iframe')
+  
+  iframe.style.position = 'absolute'
+  iframe.style.top = '0px'
+  iframe.style.left = '0px'
+  iframe.style.width = '100%'
+  iframe.style.height = '100%'
+  iframe.style.border = '0'
+
   let url = encodeURIComponent('https://embed.tlk.io')
   iframe.src = `${baseUrl}?url=${url}`
   box.appendChild(iframe)
