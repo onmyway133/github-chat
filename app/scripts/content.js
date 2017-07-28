@@ -60,6 +60,9 @@ function createTop() {
 
   const button = createButton()
   div.appendChild(button)
+
+  const a = createTitle()
+  div.appendChild(a)
   
   return div
 }
@@ -76,6 +79,20 @@ function createBox() {
   div.setAttribute('data-nickname', getCurrentUser())
   
   return div
+}
+
+function createTitle() {
+  const a = document.createElement('a')
+  a.innerText = 'github-chat'
+  a.href = 'https://github.com/onmyway133/github-chat'
+  a.target = 'blank'
+
+  a.style.position = 'relative'
+  a.style.left = '10px'
+  a.style.top = '2px'
+  a.style.color = 'orange'
+
+  return a
 }
 
 function createButton() {
