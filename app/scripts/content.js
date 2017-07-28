@@ -61,6 +61,8 @@ function createiFrame() {
 
   let url = encodeURIComponent('https://embed.tlk.io')
   iframe.src = `${baseUrl}?url=${url}`
+
+  return iframe
 }
 
 function createContainer() {
