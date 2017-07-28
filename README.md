@@ -3,6 +3,7 @@
 ## Description
 
 - Icon from https://www.emojione.com
+- Chat from https://tlk.io/
 
 ## Author
 
