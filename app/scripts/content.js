@@ -31,7 +31,6 @@ function showChat(t, e) {
 
 document.addEventListener('DOMContentLoaded', () => {
   createOverlay()
-  getPath()
   showChat(window, document)
 })
 
